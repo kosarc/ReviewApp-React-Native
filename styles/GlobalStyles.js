@@ -7,6 +7,14 @@ const GlobalStyles = StyleSheet.create({
   title_text: {
     fontFamily: "nunito-bold",
   },
+  home: {
+    marginTop: 10,
+    flex: 1,
+  },
+  review: {
+    marginTop: 10,
+    flex: 1,
+  },
 });
 
 export default GlobalStyles;
