@@ -1,8 +1,9 @@
 import { useEffect, useCallback } from "react";
-import { View, StyleSheet } from "react-native";
+import { View } from "react-native";
 import { useFonts } from "expo-font";
 import * as SplashScreen from "expo-splash-screen";
 import Home from "./components/Home";
+import GlobalStyles from "./styles/GlobalStyles";
 
 export default function App() {
   const [fontsLoaded] = useFonts({
@@ -28,14 +29,8 @@ export default function App() {
   }
 
   return (
-    <View style={styles.container}>
+    <View style={GlobalStyles.container} onLayout={onLayoutRootView}>
       <Home />
     </View>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    marginTop: 20,
-  },
-});
