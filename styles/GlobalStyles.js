@@ -15,6 +15,19 @@ const GlobalStyles = StyleSheet.create({
     marginTop: 10,
     flex: 1,
   },
+  button: {
+    marginVertical: 10,
+    marginHorizontal: 60,
+    padding: 5,
+    borderRadius: 10,
+    backgroundColor: "coral",
+  },
+  button_title: {
+    color: "#fff",
+    textAlign: "center",
+    fontWeight: "600",
+    textTransform: "uppercase",
+  },
 });
 
 export default GlobalStyles;
