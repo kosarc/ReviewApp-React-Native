@@ -1,16 +1,12 @@
 import { View, Text, TouchableOpacity } from "react-native";
+import { useRoute } from "@react-navigation/native";
 import GlobalStyles from "../styles/GlobalStyles";
-function ReviewDetails({ navigation }) {
-  const hanldePress = () => {
-    navigation.goBack("Home");
-  };
-
+function ReviewDetails() {
+  const rout = useRoute();
   return (
     <View style={GlobalStyles.review}>
-      <Text style={GlobalStyles.title_text}>Hello from Review Details</Text>
-      <TouchableOpacity style={GlobalStyles.button} onPress={hanldePress}>
-        <Text style={GlobalStyles.button_title}>go to Home</Text>
-      </TouchableOpacity>
+      <Text style={GlobalStyles.title_text}>{rout.params.age}</Text>
+      <Text style={GlobalStyles.title_text}>{rout.params.rating}</Text>
     </View>
   );
 }

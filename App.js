@@ -34,7 +34,19 @@ export default function App() {
 
   return (
     <NavigationContainer onLayout={onLayoutRootView}>
-      <Stack.Navigator initialRouteName="Home">
+      <Stack.Navigator
+        initialRouteName="Home"
+        screenOptions={{
+          headerStyle: {
+            backgroundColor: "coral",
+          },
+          headerTintColor: "#fff",
+          headerTitleStyle: {
+            fontWeight: "bold",
+            fontSize: "18",
+          },
+        }}
+      >
         <Stack.Screen name="Home" component={Home} />
         <Stack.Screen name="Review Details" component={ReviewDetails} />
       </Stack.Navigator>
