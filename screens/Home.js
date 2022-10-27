@@ -19,7 +19,7 @@ function Home({ navigation }) {
             <TouchableOpacity
               onPress={() => navigation.navigate("Review Details", item)}
             >
-              <Text>{item.title}</Text>
+              <Text style={GlobalStyles.home_text}>{item.title}</Text>
             </TouchableOpacity>
           </View>
         );

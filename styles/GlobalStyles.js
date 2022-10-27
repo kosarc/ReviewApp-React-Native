@@ -1,32 +1,35 @@
 import { StyleSheet } from "react-native";
 
 const GlobalStyles = StyleSheet.create({
-  container: {
-    marginTop: 15,
-  },
   title_text: {
     fontFamily: "nunito-bold",
   },
-  home: {
-    marginTop: 10,
-    flex: 1,
+  header: {
+    backgroundColor: "coral",
+    flexDirection: "row",
+    paddingTop: 10,
+    paddingStart: 13,
+    alignItems: "center",
+    fontFamily: "nunito-bold",
+    height: 70,
   },
   review: {
     marginTop: 10,
     flex: 1,
   },
-  button: {
-    marginVertical: 10,
-    marginHorizontal: 60,
-    padding: 5,
-    borderRadius: 10,
-    backgroundColor: "coral",
-  },
-  button_title: {
+  text: {
     color: "#fff",
-    textAlign: "center",
     fontWeight: "600",
-    textTransform: "uppercase",
+    fontSize: 22,
+    position: "relative",
+    left: 108,
+  },
+  home_text: {
+    fontFamily: "nunito-bold",
+    paddingTop: 10,
+  },
+  home: {
+    fontFamily: "nunito-bold",
   },
 });
 

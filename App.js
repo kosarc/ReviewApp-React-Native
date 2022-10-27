@@ -8,6 +8,7 @@ import { NavigationContainer } from "@react-navigation/native";
 import About from "./screens/About";
 import NativeStack from "./navigations/NativeStack";
 import CustomHeader from "./shared/CustomHeader";
+import { getHeaderTitle } from "@react-navigation/elements";
 
 const Drawer = createDrawerNavigator();
 
@@ -50,15 +51,13 @@ export default function App() {
         />
         <Drawer.Screen
           name="About"
-          component={({ navigation }) => (
-            <About
-              options={{
-                headerTitle: () => {
-                  return <CustomHeader navigation={navigation} />;
-                },
-              }}
-            />
-          )}
+          component={About}
+          options={{
+            header: ({ navigation, route, options }) => {
+              const title = getHeaderTitle(options, route.name);
+              return <CustomHeader title={title} navigation={navigation} />;
+            },
+          }}
         />
       </Drawer.Navigator>
     </NavigationContainer>
