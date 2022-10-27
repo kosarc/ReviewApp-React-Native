@@ -1,13 +1,15 @@
+import "react-native-gesture-handler";
+import { createDrawerNavigator } from "@react-navigation/drawer";
 import { useEffect, useCallback } from "react";
 import * as React from "react";
 import { useFonts } from "expo-font";
 import * as SplashScreen from "expo-splash-screen";
-import { createNativeStackNavigator } from "@react-navigation/native-stack";
-import Home from "./components/Home";
-import ReviewDetails from "./components/ReviewDetails";
 import { NavigationContainer } from "@react-navigation/native";
+import About from "./screens/About";
+import NativeStack from "./navigations/NativeStack";
+import CustomHeader from "./shared/CustomHeader";
 
-const Stack = createNativeStackNavigator();
+const Drawer = createDrawerNavigator();
 
 export default function App() {
   const [fontsLoaded] = useFonts({
@@ -34,22 +36,31 @@ export default function App() {
 
   return (
     <NavigationContainer onLayout={onLayoutRootView}>
-      <Stack.Navigator
-        initialRouteName="Home"
+      <Drawer.Navigator
         screenOptions={{
           headerStyle: {
             backgroundColor: "coral",
           },
-          headerTintColor: "#fff",
-          headerTitleStyle: {
-            fontWeight: "bold",
-            fontSize: "18",
-          },
         }}
       >
-        <Stack.Screen name="Home" component={Home} />
-        <Stack.Screen name="Review Details" component={ReviewDetails} />
-      </Stack.Navigator>
+        <Drawer.Screen
+          name="Home"
+          component={NativeStack}
+          options={{ headerShown: false }}
+        />
+        <Drawer.Screen
+          name="About"
+          component={({ navigation }) => (
+            <About
+              options={{
+                headerTitle: () => {
+                  return <CustomHeader navigation={navigation} />;
+                },
+              }}
+            />
+          )}
+        />
+      </Drawer.Navigator>
     </NavigationContainer>
   );
 }
