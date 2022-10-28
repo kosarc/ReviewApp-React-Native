@@ -1,6 +1,6 @@
 import { View, Text, TouchableOpacity } from "react-native";
 import { FontAwesome5 } from "@expo/vector-icons";
-import GlobalStyles from "../styles/GlobalStyles";
+import { GlobalStyles } from "../styles/GlobalStyles";
 
 function CustomHeader({ navigation, title }) {
   function hanldePress() {

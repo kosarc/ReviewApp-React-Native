@@ -1,6 +1,6 @@
 import { StyleSheet } from "react-native";
 
-const GlobalStyles = StyleSheet.create({
+export const GlobalStyles = StyleSheet.create({
   title_text: {
     fontFamily: "nunito-bold",
   },
@@ -31,6 +31,7 @@ const GlobalStyles = StyleSheet.create({
   home: {
     fontFamily: "nunito-bold",
   },
+  card: {
+    backgroundColor: "green",
+  },
 });
-
-export default GlobalStyles;
