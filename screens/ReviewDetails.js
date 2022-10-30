@@ -9,7 +9,7 @@ function ReviewDetails() {
   return (
     <View style={GlobalStyles.review}>
       <Card>
-        <Text style={GlobalStyles.title_text}>{rout.params.age}</Text>
+        <Text style={GlobalStyles.title_text}>{rout.params.body}</Text>
         <View style={GlobalStyles.icon}>
           <Text>GemeZone rating: </Text>
           <Image source={images.ratings[iconRating]} />

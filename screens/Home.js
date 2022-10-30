@@ -4,12 +4,13 @@ import { GlobalStyles } from "../styles/GlobalStyles";
 import Card from "../shared/Card";
 import { Ionicons } from "@expo/vector-icons";
 import { AntDesign } from "@expo/vector-icons";
+import FormReview from "./FormReview";
 
 function Home({ navigation }) {
   const [reviews, setReviews] = useState([
-    { title: "Serhii Kosarenko", age: "34", rating: 5, key: "1" },
-    { title: "Oleksandr Osadchuk", age: "34", rating: 4, key: "2" },
-    { title: "Ivan Didok", age: "36", rating: 3, key: "3" },
+    { title: "Serhii Kosarenko", body: "34", rating: 5, key: "1" },
+    { title: "Oleksandr Osadchuk", body: "34", rating: 4, key: "2" },
+    { title: "Ivan Didok", body: "36", rating: 3, key: "3" },
   ]);
   const [modalVisibility, setModalVisibility] = useState(false);
 
@@ -24,6 +25,7 @@ function Home({ navigation }) {
             onPress={() => setModalVisibility(false)}
             style={GlobalStyles.close}
           />
+          <FormReview />
         </View>
       </Modal>
 
