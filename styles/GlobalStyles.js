@@ -12,6 +12,7 @@ export const GlobalStyles = StyleSheet.create({
     alignItems: "center",
     fontFamily: "nunito-bold",
     height: 70,
+    marginBottom: 30,
   },
   review: {
     marginTop: 10,
@@ -32,6 +33,31 @@ export const GlobalStyles = StyleSheet.create({
     fontFamily: "nunito-bold",
   },
   card: {
-    backgroundColor: "green",
+    borderRadius: 6,
+    borderColor: "#333",
+    backgroundColor: "#fff",
+    marginVertical: 5,
+    marginHorizontal: 20,
+    shadowRadius: 3,
+    shadowColor: "#333",
+    elevation: 3,
+    shadowOpacity: 0.3,
+    shadowOffset: { width: 2, height: 2 },
   },
+  content: {
+    marginHorizontal: 20,
+    marginBottom: 15,
+    marginTop: 10,
+  },
+  icon: {},
 });
+
+export const images = {
+  ratings: {
+    1: require("../assets/rating-icon/rating-1.png"),
+    2: require("../assets/rating-icon/rating-2.png"),
+    3: require("../assets/rating-icon/rating-3.png"),
+    4: require("../assets/rating-icon/rating-4.png"),
+    5: require("../assets/rating-icon/rating-5.png"),
+  },
+};

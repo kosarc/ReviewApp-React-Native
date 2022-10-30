@@ -1,5 +1,5 @@
 import { View, Text } from "react-native";
-import GlobalStyles from "../styles/GlobalStyles";
+import { GlobalStyles } from "../styles/GlobalStyles";
 
 const About = () => (
   <View>

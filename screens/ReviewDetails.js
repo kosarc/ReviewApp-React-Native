@@ -1,15 +1,18 @@
-import { View, Text } from "react-native";
+import { View, Text, Image } from "react-native";
 import { useRoute } from "@react-navigation/native";
-import { GlobalStyles } from "../styles/GlobalStyles";
+import { GlobalStyles, images } from "../styles/GlobalStyles";
 import Card from "../shared/Card";
 
 function ReviewDetails() {
   const rout = useRoute();
+  const iconRating = rout.params.rating;
   return (
     <View style={GlobalStyles.review}>
       <Card>
         <Text style={GlobalStyles.title_text}>{rout.params.age}</Text>
-        <Text style={GlobalStyles.title_text}>{rout.params.rating}</Text>
+        <View style={GlobalStyles.icon}>
+          <Image source={images.ratings[iconRating]} />
+        </View>
       </Card>
     </View>
   );
