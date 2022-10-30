@@ -2,7 +2,7 @@ import { View, Text, TouchableOpacity, FlatList, Modal } from "react-native";
 import React, { useState } from "react";
 import { GlobalStyles } from "../styles/GlobalStyles";
 import Card from "../shared/Card";
-import { Entypo } from "@expo/vector-icons";
+import { Ionicons } from "@expo/vector-icons";
 import { AntDesign } from "@expo/vector-icons";
 
 function Home({ navigation }) {
@@ -27,8 +27,8 @@ function Home({ navigation }) {
         </View>
       </Modal>
 
-      <Entypo
-        name="add-to-list"
+      <Ionicons
+        name="add-outline"
         size={32}
         color="black"
         onPress={() => setModalVisibility(true)}

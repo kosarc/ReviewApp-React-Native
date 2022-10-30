@@ -66,12 +66,20 @@ export const GlobalStyles = StyleSheet.create({
   },
   close: {
     marginTop: 40,
-    textAlign: "center",
+    borderWidth: 1,
+    borderColor: "#ddd",
+    borderRadius: 6,
+    padding: 3,
+    alignSelf: "center",
   },
 
   add: {
     marginBottom: 25,
-    textAlign: "center",
+    alignSelf: "center",
+    borderWidth: 1,
+    borderColor: "#ddd",
+    borderRadius: 6,
+    padding: 3,
   },
 });
 
