@@ -71,6 +71,7 @@ export const GlobalStyles = StyleSheet.create({
     borderRadius: 6,
     padding: 3,
     alignSelf: "center",
+    marginBottom: 30,
   },
 
   add: {
@@ -87,6 +88,17 @@ export const GlobalStyles = StyleSheet.create({
     padding: 10,
     fontSize: 18,
     borderRadius: 6,
+    marginVertical: 7,
+    marginHorizontal: 20,
+  },
+  review_list: {
+    flex: 1,
+  },
+  error: {
+    fontWeight: "600",
+    color: "crimson",
+    textAlign: "center",
+    marginVertical: 5,
   },
 });
 

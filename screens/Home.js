@@ -1,4 +1,12 @@
-import { View, Text, TouchableOpacity, FlatList, Modal } from "react-native";
+import {
+  View,
+  Text,
+  TouchableOpacity,
+  FlatList,
+  Modal,
+  Keyboard,
+  TouchableWithoutFeedback,
+} from "react-native";
 import React, { useState } from "react";
 import { GlobalStyles } from "../styles/GlobalStyles";
 import Card from "../shared/Card";
@@ -14,24 +22,32 @@ function Home({ navigation }) {
   ]);
   const [modalVisibility, setModalVisibility] = useState(false);
 
+  const addReview = (review) => {
+    review.key = Math.random().toString();
+    setReviews((previusReview) => [review, ...previusReview]);
+    setModalVisibility(false);
+  };
+
   return (
     <View>
       <Modal visible={modalVisibility}>
-        <View>
-          <AntDesign
-            name="close"
-            size={32}
-            color="black"
-            onPress={() => setModalVisibility(false)}
-            style={GlobalStyles.close}
-          />
-          <FormReview />
-        </View>
+        <TouchableWithoutFeedback onPress={() => Keyboard.dismiss()}>
+          <View style={GlobalStyles.review_list}>
+            <AntDesign
+              name="close"
+              size={28}
+              color="black"
+              onPress={() => setModalVisibility(false)}
+              style={GlobalStyles.close}
+            />
+            <FormReview addReview={addReview} />
+          </View>
+        </TouchableWithoutFeedback>
       </Modal>
 
       <Ionicons
         name="add-outline"
-        size={32}
+        size={30}
         color="black"
         onPress={() => setModalVisibility(true)}
         style={GlobalStyles.add}
