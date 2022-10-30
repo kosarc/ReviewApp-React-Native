@@ -5,7 +5,6 @@ export const GlobalStyles = StyleSheet.create({
     fontFamily: "nunito-bold",
   },
   header: {
-    backgroundColor: "coral",
     flexDirection: "row",
     paddingTop: 10,
     paddingStart: 13,
@@ -19,11 +18,12 @@ export const GlobalStyles = StyleSheet.create({
     flex: 1,
   },
   text: {
-    color: "#fff",
+    color: "#333",
     fontWeight: "600",
     fontSize: 22,
     position: "relative",
     left: 108,
+    bottom: 5,
   },
   home_text: {
     fontFamily: "nunito-bold",
@@ -49,7 +49,30 @@ export const GlobalStyles = StyleSheet.create({
     marginBottom: 15,
     marginTop: 10,
   },
-  icon: {},
+  icon: {
+    flexDirection: "row",
+    justifyContent: "center",
+    borderTopWidth: 1,
+    borderColor: "#eee",
+    paddingTop: 16,
+    marginTop: 16,
+  },
+  header_icon: {
+    width: 26,
+    height: 26,
+    position: "relative",
+    left: 75,
+    top: 20,
+  },
+  close: {
+    marginTop: 40,
+    textAlign: "center",
+  },
+
+  add: {
+    marginBottom: 25,
+    textAlign: "center",
+  },
 });
 
 export const images = {

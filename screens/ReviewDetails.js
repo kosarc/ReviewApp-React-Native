@@ -11,6 +11,7 @@ function ReviewDetails() {
       <Card>
         <Text style={GlobalStyles.title_text}>{rout.params.age}</Text>
         <View style={GlobalStyles.icon}>
+          <Text>GemeZone rating: </Text>
           <Image source={images.ratings[iconRating]} />
         </View>
       </Card>

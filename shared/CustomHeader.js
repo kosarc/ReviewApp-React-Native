@@ -1,4 +1,10 @@
-import { View, Text, TouchableOpacity } from "react-native";
+import {
+  View,
+  Text,
+  TouchableOpacity,
+  Image,
+  ImageBackground,
+} from "react-native";
 import { FontAwesome5 } from "@expo/vector-icons";
 import { GlobalStyles } from "../styles/GlobalStyles";
 
@@ -7,19 +13,26 @@ function CustomHeader({ navigation, title }) {
     navigation.openDrawer();
   }
   return (
-    <View style={GlobalStyles.header}>
+    <ImageBackground
+      style={GlobalStyles.header}
+      source={require("../assets/game_bg.png")}
+    >
       <TouchableOpacity>
         <FontAwesome5
           name="hamburger"
           size={32}
-          color="#fff"
+          color="#333"
           onPress={hanldePress}
         />
       </TouchableOpacity>
-      <View>
+      <View style={GlobalStyles.title_wrapper}>
+        <Image
+          source={require("../assets/heart_logo.png")}
+          style={GlobalStyles.header_icon}
+        />
         <Text style={GlobalStyles.text}>{title}</Text>
       </View>
-    </View>
+    </ImageBackground>
   );
 }
 
