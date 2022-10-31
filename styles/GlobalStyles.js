@@ -100,6 +100,21 @@ export const GlobalStyles = StyleSheet.create({
     textAlign: "center",
     marginVertical: 5,
   },
+  submit_button: {
+    borderRadius: 8,
+    backgroundColor: "#f01d71",
+    paddingHorizontal: 16,
+    paddingVertical: 12,
+    marginTop: 15,
+    marginHorizontal: 40,
+  },
+  submit_button_title: {
+    color: "#fff",
+    fontWeight: "600",
+    textTransform: "uppercase",
+    textAlign: "center",
+    fontSize: 18,
+  },
 });
 
 export const images = {

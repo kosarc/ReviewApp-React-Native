@@ -16,9 +16,19 @@ import FormReview from "./FormReview";
 
 function Home({ navigation }) {
   const [reviews, setReviews] = useState([
-    { title: "Serhii Kosarenko", body: "34", rating: 5, key: "1" },
-    { title: "Oleksandr Osadchuk", body: "34", rating: 4, key: "2" },
-    { title: "Ivan Didok", body: "36", rating: 3, key: "3" },
+    {
+      title: "Dark Seader",
+      body: "Greate heroe, powerfull and strong",
+      rating: 5,
+      key: "1",
+    },
+    { title: "Night Stalker", body: "Fast and rogue", rating: 4, key: "2" },
+    {
+      title: "Scorpion",
+      body: "Good choise for the beginers",
+      rating: 3,
+      key: "3",
+    },
   ]);
   const [modalVisibility, setModalVisibility] = useState(false);
 
@@ -30,7 +40,7 @@ function Home({ navigation }) {
 
   return (
     <View>
-      <Modal visible={modalVisibility}>
+      <Modal visible={modalVisibility} animationType="slide">
         <TouchableWithoutFeedback onPress={() => Keyboard.dismiss()}>
           <View style={GlobalStyles.review_list}>
             <AntDesign
